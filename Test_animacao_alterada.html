@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Animação de Texto</title>
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .texto {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      opacity: 0;
+      animation: alternar 6s infinite;
+          font-family: 'luckiest-guy', cursive;
+   text-shadow:
+    0 0 7px #fff,
+    0 0 10px #f0e443,
+    0 0 21px #f0f339,
+
+    0 0 151px rgb(12, 212, 152);
+    color: #e7e43f;
+    }
+
+    .texto:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .texto:nth-child(2) {
+      animation-delay: 3s;
+    }
+
+    @keyframes alternar {
+      0% { opacity: 0; transform: translateY(20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      40% { opacity: 1; transform: translateY(0); }
+      50% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="texto">Primeiro Texto</div>
+    <div class="texto">Segundo Texto</div>
+  </div>
+</body>
+</html>
