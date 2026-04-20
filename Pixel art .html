@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+body{display: flex;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+  justify-content: center ;
+  
+} 
+
+.pixel{
+  width:10px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  box-shadow:10px 0px 0 black, -10px 0px 0px black, 20px 0px 0px black,30px 10px 0px black, -20px 10px 0px black,-30px 20px 0px black , -30px 30px 0px black, -40px 40px 0px black, -50px 50px 0px black , -50px 60px 0px black, -50px 70px 0px black , -40px 80px 0px black , -30px 90px 0px black, -20px 90px 0px black ,-10px 100px 0px black,0px 100px 0px black , 10px 100px 0px black, 0px 110px 0px black, 0px 120px 0px black, -10px 130px 0px black , 0px 140px 0px black , 10px 140px 0px black, 20px 140px 0px black,10px 130px 0px black , 30px 150px 0px black, 40px 150px 0px black, 50px 150px 0px black,40px 160px 0px black, 50px 170px 0px black , 60px 170px 0px black , 70px 170px 0px black, 80px 170px 0px black,80px 160px 0px black ,80px 150px 0px black, 80px 140px 0px black , 70px 150px 0px black , 90px 140px 0px black, 90px 130px 0px black , 90px 120px 0px black , 90px 110px 0px black, 100px 130px 0px black , 110px 120px 0px, 120px 110px 0px black, 120px 100px 0px black , 130px 90px 0px black, 130px 80px 0px black , 130px 70px 0px black , 140px 70px 0px black , 150px 60px 0px black , 150px 50px 0px black , 150px 40px 0px black , 140px 30px 0px black , 140px 20px 0px black , 130px 10px 0px black , 120px 0px 0px black , 110px 10px 0px black , 110px 20px 0px black, 110px 30px 0px black, 100px 40px 0px black, 100px 50px 0px,100px 60px 0px black, 110px 70px 0px black, 110px 80px 0px black , 100px 90px 0px black , 90px 100px 0px black, 80px 100px 0px black , 80px 90px 0px black , 70px 80px 0px black, 60px 70px 0px black , 60px 60px 0px black, 50px 50px 0px black, 50px 40px 0px black , 40px 30px 0px black , 40px 20px 0px black , 10px 50px 0px black,0px 50px 0px white , 10px 60px 0px black , 0px 60px 0px black , 10px 70px 0px black , 0px 70px 0px black, 10px 10px 0px #Fe9441, 0px 10px 0px #Fe9441, -10px 10px 0px #Fe9441, 20px 10px 0px #de5138, -20px 20px 0px #Fe9441, -10px 20px 0px #Fe9441 , 0px 20px 0px #Fe9441 , 10px 20px 0px #Fe9441, 20px 20px 0px #Fe9441, 30px 20px 0px #de5138 , 30px 30px 0px #Fe9441,30px 40px 0px #Fe9441 , 40px 40px 0px #de5138, 40px 50px 0px #de5138 , 40px 60px 0px #de5138 , 50px 60px 0px #de5138 , 50px 70px 0px #de5138 , 30px 60px 0px #de5138 , 30px 70px 0px #de5138 , 40px 70px 0px #de5138 , 20px 80px 0px #de5138, 20px 90px 0px #de5138, 10px 90px 0px #de5138 , 0px 90px 0px #de5138 , -10px 90px 0px #de5138 , -30px 80px 0px #de5138,20px 50px 0px  #Fe9441 , 30px 50px 0px  #Fe9441 , 20px 60px 0px  #Fe9441 , 20px 70px 0px  #Fe9441 ,10px 80px 0px  #Fe9441 , 0px 80px 0px  #Fe9441 , -10px 80px 0px  #Fe9441 , -10px 70px 0px  #Fe9441, -10px 60px 0px  #Fe9441, -10px 50px 0px  #Fe9441 , -10px 40px 0px  #Fe9441, 0px 40px 0px  #Fe9441 , 10px 40px 0px  #Fe9441 ,20px 40px 0px  #Fe9441 , 10px 30px 0px  #Fe9441, 20px 30px 0px  #Fe9441 , 0px 30px 0px  #Fe9441 , -10px 30px 0px  #Fe9441, -20px 30px 0px  #Fe9441, -20px 40px 0px  #Fe9441 , -20px 50px 0px  #Fe9441 ,-20px 60px 0px #Fe9441 , -20px 70px 0px  #Fe9441 , -20px 80px 0px  #Fe9441, -30px 70px 0px  #Fe9441 , -30px 60px 0px  #Fe9441 , -30px 50px 0px  #Fe9441 , -30px 40px 0px  #Fe9441 , -40px 50px 0px  #Fe9441 , -40px 60px 0px  #Fe9441 , -40px 70px 0px  #Fe9441 , 20px 100px 0px #de5138 , 30px 100px 0px #de5138 , 30px 90px 0px #de5138 , 30px 80px 0px #de5138 , 40px 100px 0px black, 30px 110px 0px black , 40px 120px 0px black  , 50px 120px 0px black , 40px 110px 0px  #Fe9441 , 50px 110px 0px  #Fe9441  , 50px 100px 0px #de5138 , 50px 90px 0px #de5138 , 40px 90px 0px #de5138, 40px 80px 0px #de5138, 50px 80px 0px #de5138 , 20px 110px 0px #Ffff00, 10px 110px 0px #ffff00 , 10px 120px 0px #ffff00 , 20px 120px 0px #ffff00, 30px 130px 0px #ffff00 , 30px 120px 0px #ffff00 , 10px 130px 0px #ffff00 , 40px 130px 0px #ffff00 ,40px 140px 0px #ffcc00 , 30px 140px 0px #ffcc00 ;
+  bottom: 70%;
+  right: 65%;
+  
+  
+  
+}
+
+    
+    
+  </style>
+</head>
+<body>
+  <div class="pixel"></div>
+  
+
+
+</body>
+</html>
