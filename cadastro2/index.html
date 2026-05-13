@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img src="/img/walter.png" class="imagem" onclick="imagemClick()">
+    <h1>Cadastro de Alunos</h1>
+    
+    <!-- FORM CADASTRO -->
+    <label>Matrícula: <input type="text" id="matricula"></label>
+    <label>Nome: <input type="text" id="nome"></label>
+    <button onclick="cadastrarAluno()">Cadastrar</button>
+    
+    <!-- LISTA -->
+    <h2>Alunos Cadastrados (<span id="totalAlunos">0</span>)</h2>
+    <ul id="listaAlunos"></ul>
+    
+    <button onclick="mostrarEstatisticas()">Estatísticas</button>
+
+    <progress value="75" max="100"></progress>
+
+    <script src="/js/cadastro.js"></script>
+</body>
+</html>
