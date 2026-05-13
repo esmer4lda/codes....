@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+
+form{
+    background-color: rgb(248, 242, 242);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 250px;
+}
+
+button{
+    border: solid 5px greenyellow;
+    background-color: greenyellow;
+    border-radius: 10px;
+    cursor: pointer;   
+}
+
+button:hover{
+    background-color: rgb(0, 255, 85);
+    border: solid 5px rgb(153, 255, 0);
+    color: greenyellow;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.calcular{
+    font-family: fantasy;
+    border: solid 5px greenyellow;
+}

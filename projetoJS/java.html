@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+
+form{
+    background-color: rgb(248, 242, 242);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 250px;
+}
+
+button{
+    background-color: green;
+    border-color: green;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text"  id="nome">
+        <br>
+        <span>
+            <button type="button" onclick="adicionar()"> adicionar </button>
+            <button type="button" onclick="procurar()"> procurar </button>
+            <button type="button" onclick="tamanho()"> tamanho </button>
+            <button type="button" onclick="remoçao()"> remover </button>
+            <button type="button" onclick="exibir()"> exibir </button>
+        </span>
+    </form>
+    <script src="js/script2.js"></script>
+
+</body>
+</html>

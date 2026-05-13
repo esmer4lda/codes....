@@ -1,0 +1,34 @@
+
+body {
+height: 100vh;
+width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
+
+}
+
+.algo {
+    width: 100%;
+    height: 100%;
+    background: black;
+ position: absolute;
+ clip-path: polygon(50% 25% , 35% 0% , 0% 25% , 50% 75% , 100% 25% ,  75% 0% );
+}
+
+.i {
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  clip-path: polygon(50% 35% , 35% 10% , 10% 25% , 50% 65% , 90% 25% , 75% 10% );
+}
+
+.a {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  clip-path: polygon(50% 45% , 35% 20% , 20% 25% , 50% 55% , 80% 25% , 65% 20% );
+}
