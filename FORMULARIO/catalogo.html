@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .search-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            grid-template-areas:
+                "searchInput filterButton"
+                "";
+        }
+
+        #searchInput {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .filter-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-radius: 20px;
+            flex-wrap: wrap;
+        }
+
+        #categoryFilter {
+            padding: 10px 14px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            background: white;
+            color: #222;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        #categoryFilter option {
+            background: white;
+            color: #222;
+            padding: 10px;
+        }
+
+        #categoryFilter option:hover,
+        #categoryFilter option:checked {
+            background: #333;
+            color: white;
+        }
+
+        .products {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+
+        .card small {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 11px;
+        }
+
+        .card.hide {
+            display: none;
+        }
+
+        .botao {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        dialog {
+            border: none;
+            border-radius: 18px;
+            padding: 20px;
+            width: min(420px, 92vw);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            background: #fff;
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        dialog h2 {
+            margin-top: 0;
+            color: #222;
+        }
+
+        dialog p {
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .dialog-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 12px;
+        }
+
+        .titulo {
+            font-family: 'luckiest guy' cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #openDialog {
+            background-color: #333;
+            color: white;
+            border-radius: 14px;
+            padding: 5px;
+            box-shadow: 0px 10px 9px black
+        }
+
+        option{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Biblioteca alexandria</h1>
+
+    </header>
+    <main>
+        <section class="search-section">
+            
+            <label class="filter-box" for="categoryFilter">
+                Categoria:
+                <select id="categoryFilter">
+                    <option value="all">Todas</option>
+                    <option value="Livros">Livros</option>
+                    <option value="roupas">Roupas</option>
+                    <option value="casa">Casa</option>
+                </select>
+            </label>
+            <input type="text" placeholder="Pesquisar produto..." id="searchInput">
+        </section>
+
+        <div class="products" id="productList">
+            <section>
+                <article class="card" data-category="Livros" data-name="livro 1">
+                    <small>Livro</small>
+                    <h3>Livro 1</h3>
+                    <img src="https://thf.bing.com/th/id/OIP.HLRl-fbL9j_Gti4CFdF84AHaK9?o=7&cb=thfc1falconrm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Livro 1" width="10%" height="10%">
+                    <p>Um livro misterioso com suspense e muita aventura.</p>
+                    <button type="button" class="botao open-dialog-btn"
+                        data-title="Livro 1"
+                        data-image="https://thf.bing.com/th/id/OIP.HLRl-fbL9j_Gti4CFdF84AHaK9?o=7&cb=thfc1falconrm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        data-description="Este é o resumo do Livro 1: suspense, mistério e um começo fascinante.">Detalhes</button>
+                </article>
+            </section>
+
+            <section>
+                <article class="card" data-category="Livros" data-name="livro 2">
+                    <small>Livros</small>
+                    <h3>Livro 2</h3>
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.WJAR9YOtZXs_LpIYW1c_QAHaLQ?w=790&h=1200&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Livro 2" width="10%" height="10%">
+                    <p>Descrição do livro 2.</p>
+                    <button type="button" class="botao open-dialog-btn"
+                        data-title="Livro 2"
+                        data-image="https://tse2.mm.bing.net/th/id/OIP.WJAR9YOtZXs_LpIYW1c_QAHaLQ?w=790&h=1200&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        data-description="Resumo do Livro 2: uma leitura envolvente com personagens marcantes.">Detalhes</button>
+                </article>
+            </section>
+
+            <article class="card" data-category="Livros" data-name="livro 3">
+                <small>Livros</small>
+                <h3>Livro 3</h3>
+                <p>Descrição do livro 3.</p>
+                <button type="button" class="botao open-dialog-btn"
+                    data-title="Livro 3"
+                    data-image="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+                    data-description="Resumo do Livro 3: uma história leve, inspiradora e perfeita para ler em tardes tranquilas.">Detalhes</button>
+            </article>
+
+            <dialog id="productDialog">
+                <h2 id="dialogTitle"></h2>
+                <img id="dialogImage" src="" alt="" width="50%" height="auto">
+                <p id="dialogDescription"></p>
+                <div class="dialog-actions">
+                    <button type="button" id="closeDialog" class="botao">Fechar</button>
+                </div>
+            </dialog>
+        </div>
+    </main>
+
+    <script>
+        /* Filtragem de produtos */
+        const searchInput = document.getElementById('searchInput');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const cards = document.querySelectorAll('.card');
+        const productDialog = document.getElementById('productDialog');
+        const dialogTitle = document.getElementById('dialogTitle');
+        const dialogImage = document.getElementById('dialogImage');
+        const dialogDescription = document.getElementById('dialogDescription');
+        const closeDialog = document.getElementById('closeDialog');
+
+        function filterProducts() {
+            const query = searchInput.value.toLowerCase().trim();
+            const selectedCategory = categoryFilter.value;
+
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const name = card.dataset.name.toLowerCase();
+                const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+                const matchesSearch = name.includes(query);
+
+                card.classList.toggle('hide', !(matchesCategory && matchesSearch));
+            });
+        }
+
+        categoryFilter.addEventListener('change', filterProducts);
+        searchInput.addEventListener('input', filterProducts);
+
+        document.querySelectorAll('.open-dialog-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                dialogTitle.textContent = button.dataset.title;
+                dialogImage.src = button.dataset.image;
+                dialogImage.alt = button.dataset.title;
+                dialogDescription.textContent = button.dataset.description;
+                productDialog.showModal();
+            });
+        });
+
+        closeDialog.addEventListener('click', () => {
+            productDialog.close();
+        });
+    </script>
+</body>
+
+</html>
